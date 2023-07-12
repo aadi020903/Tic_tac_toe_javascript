@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    input
+    {
+        padding: 70px;
+        width: 5%;
+        border: 5px solid black;
+        font-size: 30px;
+        font-weight: 700;
+      
+       
+    }
+    
+    
+</style>
+<body bgcolor="grey">
+    <pre>
+                <span style="font-size: 60px; font-weight:900; margin-left:20%; "> X - TIC TAC TOE - O </span>
+        
+                   <form name="frm"></form>
+                     <input type="button" value="" id="1" onclick="t_t_t(this)" style="margin-left: 25%;"><input type="button" value=" " id="4" onclick="t_t_t(this)"><input type="button" value="  " id="7" onclick="t_t_t(this)">
+                     <input type="button" value="   " id="2" onclick="t_t_t(this)" style="margin-left: 25%;"><input type="button" value="    " id="5" onclick="t_t_t(this)"><input type="button" value="     " id="8" onclick="t_t_t(this)">
+                     <input type="button" value="      " id="3" onclick="t_t_t(this)" style="margin-left: 25%;"><input type="button" value="        " id="6" onclick="t_t_t(this)"><input type="button" value="        " id="9" onclick="t_t_t(this)">
+                   
+                  
+                
+    </pre>
+
+    <script>
+       
+        val ="X";
+        function t_t_t(t)
+        {t.value = val;
+
+        if(t.value=="X")
+        {
+            val="O";
+        }
+        else
+        {
+            val="X";
+        }
+        
+        var a = document.getElementById("1").value;
+        var b = document.getElementById("2").value;
+        var c = document.getElementById("3").value;
+        var d = document.getElementById("4").value;
+        var e = document.getElementById("5").value;
+        var f = document.getElementById("6").value;
+        var g = document.getElementById("7").value;
+        var h = document.getElementById("8").value;
+        var i = document.getElementById("9").value;
+         var win;
+         var loose;
+          
+        // 1,2,3 abc 1
+        // 1,4,7 adg 1
+        // 1,5,9 aei 1
+        // 5,6,4 efd 1
+        // 5,8,2 ehb 1
+        // 5,3,7 ecg 1
+        // 9,7,8 igh 1
+        // 9,3,6 icf 1
+        if(a==b && a==c || a==d && a==g || a==e && a==i || b==e && b==h || c==f && c==i || d==e && d==f ||g==e && g==c || g==i && g==h )
+        {
+          win=t.value;   
+          loose = val;
+            alert(win +" win the game and "+ loose+ " loss the match" );
+            document.getElementById("1").disabled = true;
+            document.getElementById("2").disabled = true;
+            document.getElementById("3").disabled = true;
+            document.getElementById("4").disabled = true;
+            document.getElementById("5").disabled = true;
+            document.getElementById("6").disabled = true;
+            document.getElementById("7").disabled = true;
+            document.getElementById("8").disabled = true;
+            document.getElementById("9").disabled = true;
+
+          
+        }
+
+            //  else
+        //{
+
+            //a.disabled = true;
+            //b.disabled = true;
+            //c.disabled = true;
+            //d.disabled = true;
+            //e.disabled = true;
+            //f.disabled = true;
+            //g.disabled = true;
+            //h.disabled = true;
+            //i.disabled = true;
+         // //  document.getElementById("1").disabled = true;
+         // //  document.getElementById("2").disabled = true;
+         // //  document.getElementById("3").disabled = true;
+         // //  document.getElementById("4").disabled = true;
+         // //  document.getElementById("5").disabled = true;
+         // //  document.getElementById("6").disabled = true;
+         // //  document.getElementById("7").disabled = true;
+         // //  document.getElementById("8").disabled = true;
+         // //  document.getElementById("9").disabled = true;//
+//
+         // //
+        //}//
+    }
+    </script>
+</body>
+</html>
